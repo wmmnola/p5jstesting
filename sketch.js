@@ -3,7 +3,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
-  fill(0);
+  background(0);
+  fill(255);
   line(10, 10, 20, 20);
 }
