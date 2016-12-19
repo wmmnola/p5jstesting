@@ -25,7 +25,7 @@ function connectToFirebase() {
   });
 
   var database = firebase.database();
-  console.log(Database)
+  console.log(database);
   var ref = database.ref("smartdatabase-266a9");
   ref.on("value", gotData, errData);
 
