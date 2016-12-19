@@ -1,5 +1,4 @@
 function setup() {
-  createCanvas(400, 400);
   // Initialize Firebase
 }
 
@@ -15,6 +14,9 @@ function connectToFirebase() {
     messagingSenderId: "866180427680"
   };
 
+
+
+  firebase.initializeApp(config);
   firebase.auth().signInWithEmailAndPassword(email, password).catch(function(
     error) {
     // Handle Errors here.
@@ -22,8 +24,6 @@ function connectToFirebase() {
     var errorMessage = error.message;
     // ...
   });
-
-  firebase.initializeApp(config);
   var database = firebase.database();
   var ref = database.ref("smartdatabase");
   ref.on("value", gotData, errData);
