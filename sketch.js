@@ -5,7 +5,7 @@ function setup() {
 function connectToFirebase() {
   var email = document.getElementById("1").value;
   var password = document.getElementById("2").value;
-
+  console.log(password);
   var config = {
     apiKey: "AIzaSyBfbJ4HgT-rr3FCxOVsXMUkRDeywitRwO4",
     authDomain: "smartdatabase-266a9.firebaseapp.com",
@@ -13,8 +13,6 @@ function connectToFirebase() {
     storageBucket: "smartdatabase-266a9.appspot.com",
     messagingSenderId: "866180427680"
   };
-
-
 
   firebase.initializeApp(config);
   firebase.auth().signInWithEmailAndPassword(email, password).catch(function(
