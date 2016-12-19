@@ -1,11 +1,11 @@
 function setup() {
   // Initialize Firebase
 }
+var database;
 
 function connectToFirebase() {
   var email = document.getElementById("1").value;
   var password = document.getElementById("2").value;
-  console.log(password);
   var config = {
     apiKey: "AIzaSyBfbJ4HgT-rr3FCxOVsXMUkRDeywitRwO4",
     authDomain: "smartdatabase-266a9.firebaseapp.com",
@@ -24,7 +24,7 @@ function connectToFirebase() {
     // ...
   });
 
-  var database = firebase.database();
+  database = firebase.database();
   console.log(database);
   var ref = database.ref("smartdatabase-266a9");
   ref.on("value", gotData, errData);
