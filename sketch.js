@@ -15,6 +15,7 @@ function connectToFirebase() {
   };
 
   firebase.initializeApp(config);
+  console.log(firebase);
   firebase.auth().signInWithEmailAndPassword(email, password).catch(function(
     error) {
     // Handle Errors here.
