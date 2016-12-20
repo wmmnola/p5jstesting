@@ -33,7 +33,7 @@ function connectToFirebase() {
 function gotData(data) {
   console.log(data.val());
   myData = data.val();
-  window.location.href = "test.html";
+  window.location.href = "query.html";
 }
 
 function errData(err) {
