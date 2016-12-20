@@ -21,6 +21,7 @@ function connectToFirebase() {
     var errorMessage = error.message;
     console.log(error.message);
     // ...
+
   });
 
   database = firebase.database();
@@ -32,6 +33,7 @@ function connectToFirebase() {
 function gotData(data) {
   console.log(data.val());
   myData = data.val();
+  window.location.href = "test.html";
 }
 
 function errData(err) {
